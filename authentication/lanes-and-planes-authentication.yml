@@ -1,0 +1,59 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.lanes-planes.com/llms.txt
+docs: https://support.lanes-planes.com/hc/en-us
+summary:
+  types:
+  - saml
+  api_key_in: []
+  oauth2_flows: []
+  note: >-
+    Derived-from-OpenAPI is not possible for this provider: Lanes & Planes publishes no
+    OpenAPI, Swagger, or other machine-readable API definition, so there are no
+    securitySchemes to aggregate. This profile is assembled from the company's own
+    published statements only.
+schemes:
+- name: SAML 2.0 Single Sign-On
+  type: saml
+  protocol: SAML 2.0
+  audience: end-user / workforce authentication to the Lanes & Planes application
+  application: https://app.lanes-planes.com/
+  sources:
+  - https://www.lanes-planes.com/llms.txt
+  evidence: >-
+    "Authentication: Enterprise-wide security via Single Sign-On (SSO) supporting
+    SAML 2.0."
+api_authentication:
+  documented: false
+  status: undisclosed
+  note: >-
+    The External API (ExtAPI) used for HRIS and identity-system synchronization is named
+    by the company but its authentication model is not published. No public developer
+    portal, API reference, credential self-service, or OpenAPI definition exists, so the
+    API-side scheme (key, bearer token, mTLS, or OAuth) is unknown. Nothing is asserted
+    here in the absence of evidence.
+oauth:
+  documented: false
+  note: >-
+    No OAuth or OpenID Connect surface was found. /.well-known/openid-configuration and
+    /.well-known/oauth-authorization-server return 404 on both the marketing and
+    application hosts. No scopes/ artifact is produced, per the pipeline rule that
+    scopes/ is OAuth-only.
+identity_integrations:
+- name: Personio
+  kind: HRIS
+  integration: native synchronization
+  marketplace: https://www.marketplace.personio.de/integrations/lanes_planes/
+- name: Workday
+  kind: HRIS
+  integration: via External API (ExtAPI)
+- name: BambooHR
+  kind: HRIS
+  integration: via External API (ExtAPI)
+- name: HiBob
+  kind: HRIS
+  integration: via External API (ExtAPI)
+related:
+  conformance: conformance/lanes-and-planes-conformance.yml
+  domain_security: security/lanes-and-planes-domain-security.yml
+  trust_center: security/lanes-and-planes-trust-center.yml
