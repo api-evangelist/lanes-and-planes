@@ -1,0 +1,66 @@
+generated: '2026-07-19'
+method: searched
+source: https://www.lanes-planes.com/llms.txt
+note: >-
+  Assertions below come from the company's own published statements and from live probes.
+  Because Lanes & Planes publishes no OpenAPI definition, none of the spec-derived
+  standards (RFC 9457 problem details, JSON:API, pagination or idempotency conventions)
+  could be evaluated; they are recorded as unknown rather than guessed.
+standards:
+- id: saml-2.0
+  conforms: true
+  evidence: >-
+    Company llms.txt: "Enterprise-wide security via Single Sign-On (SSO) supporting
+    SAML 2.0."
+- id: iso-27001
+  conforms: true
+  evidence: >-
+    Company llms.txt names ISO 27001 (Information Security Management) certification;
+    trust center published at https://trust.lanes-planes.com/ (Vanta).
+- id: iso-9001
+  conforms: true
+  evidence: >-
+    Company llms.txt names ISO 9001 (Quality Management in Customer Support)
+    certification.
+- id: gdpr
+  conforms: true
+  evidence: >-
+    Company llms.txt: "100% GDPR compliant, and hosted on secure European servers."
+    Privacy policy published at https://www.lanes-planes.com/en/data-protection/.
+- id: iata-ndc
+  conforms: true
+  evidence: >-
+    Company llms.txt states flight content "Includes NDC content" alongside major global
+    carriers and alliances.
+- id: eu-vat-invoicing
+  conforms: true
+  evidence: >-
+    Company llms.txt: "Fully automated VAT-compliant invoicing"; German per-diem (VMA)
+    tax logic named as a platform capability.
+- id: oauth2
+  conforms: false
+  evidence: >-
+    No OAuth surface found; /.well-known/oauth-authorization-server returns 404 on all
+    probed hosts.
+- id: oidc
+  conforms: false
+  evidence: >-
+    /.well-known/openid-configuration returns 404 on both www.lanes-planes.com and
+    app.lanes-planes.com. SAML 2.0 is the documented SSO protocol.
+- id: scim
+  conforms: unknown
+  evidence: >-
+    User provisioning is described as HRIS synchronization via a native Personio
+    connector and the External API, with no SCIM claim published either way.
+- id: rfc9457-problem-details
+  conforms: unknown
+  evidence: no OpenAPI or public API reference available to evaluate error format
+- id: rfc9116-security-txt
+  conforms: false
+  evidence: /.well-known/security.txt returns 404 on all probed hosts
+- id: soc2
+  conforms: false
+  evidence: no SOC 2 claim found in company materials or trust center references
+related:
+  trust_center: security/lanes-and-planes-trust-center.yml
+  authentication: authentication/lanes-and-planes-authentication.yml

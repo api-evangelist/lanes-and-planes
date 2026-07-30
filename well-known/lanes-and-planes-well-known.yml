@@ -1,0 +1,41 @@
+generated: '2026-07-19'
+method: probed
+source: live HTTP probes of the Lanes & Planes web and API hosts
+summary: >-
+  No /.well-known/ discovery documents are published on any Lanes & Planes host. The
+  marketing host does publish a first-party /llms.txt (saved verbatim at
+  llms/lanes-and-planes-llms.txt), which is the only machine-addressable discovery
+  document found on the domain. Recorded here as a negative result, not a gap to be
+  filled by fabrication.
+hosts:
+- host: https://www.lanes-planes.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /llms.txt
+    status: 200
+    file: ../llms/lanes-and-planes-llms.txt
+    note: first-party llms.txt, saved verbatim
+- host: https://lanes-planes.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://api.lanes-planes.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://app.lanes-planes.com
+  documents:
+  - path: /.well-known/openid-configuration
+    status: 404
+    note: >-
+      SAML 2.0 is the documented enterprise SSO protocol; no OIDC discovery document is
+      expected or published.
