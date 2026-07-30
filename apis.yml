@@ -1,23 +1,137 @@
 aid: lanes-and-planes
 name: Lanes & Planes
-description: Lanes & Planes is a company surfaced as a portfolio company of battery-ventures and added
-  to the API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment
-  pipeline.
+description: 'Lanes & Planes is a Munich-based travel and expense (T&E) management platform
+  that positions itself as the financial infrastructure for European corporate travel. The
+  platform covers the full T&E lifecycle in one system: travel request, digital approval
+  flows, booking, and final accounting. Its inventory spans European rail (Deutsche Bahn,
+  ÖBB, SBB, SNCF), flights from the major global carriers and alliances including NDC content,
+  over seven million hotels via direct interfaces plus HRS, Expedia and Booking.com, Airbnb
+  for Work, global rental cars, and ground mobility including the Deutschland-Ticket and
+  Flixbus. The product is built for finance departments, emphasizing VAT-compliant automated
+  invoicing, German per-diem (VMA) tax logic, centralized billing on a single creditor, real-time
+  budget tracking, and automated travel-policy enforcement. It integrates with ERP and accounting
+  systems (DATEV, SAP, Microsoft Dynamics, Sage, Addison) and with HRIS platforms, offering
+  native Personio synchronization and an External API (ExtAPI) for other HRIS and identity
+  systems such as Workday, BambooHR and HiBob. Enterprise authentication is via SAML 2.0
+  single sign-on. The company is certified to ISO 27001 and ISO 9001, is GDPR compliant, and
+  hosts on European servers. Lanes & Planes is backed by Battery Ventures.'
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://assets.wp.lanes-planes.com/app/uploads/2024/11/Display_image_Lanes-Planes.jpg
 url: https://raw.githubusercontent.com/api-evangelist/lanes-and-planes/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - battery-ventures
-x-tier: stub
-x-tier-reason: portfolio-lead
+x-tier: profiled
+x-tier-reason: enrichment-pass-no-public-api-program
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
-apis: []
+- Travel
+- Business Travel
+- Travel Management
+- Expense Management
+- Spend Management
+- Finance
+- Accounting
+- ERP Integration
+- HRIS
+- SaaS
+- Germany
+- Europe
+apis:
+- aid: lanes-and-planes:ext-api
+  name: Lanes & Planes External API (ExtAPI)
+  description: 'The External API (ExtAPI) is named in the company''s own llms.txt as the
+    integration surface used to synchronize employee and organizational data from HRIS and
+    identity systems that lack a native connector (for example Workday, BambooHR and HiBob),
+    alongside the native Personio integration. The API is partner- and customer-gated: Lanes
+    & Planes publishes no public developer portal, API reference, OpenAPI definition, or
+    self-service credentials, and access is arranged through the implementation manager
+    assigned during onboarding. The baseURL below is the live api.lanes-planes.com host on
+    the company domain, recorded here as the observed API host; it serves no public
+    documentation or discovery document. This entry is a placeholder for a real but
+    undocumented API surface, not a description of a published API program.'
+  humanURL: https://www.lanes-planes.com/en/full-system-integration/
+  baseURL: https://api.lanes-planes.com/
+  tags:
+  - HRIS
+  - Data Synchronization
+  - Employee Data
+  - Integration
+  properties:
+  - type: Documentation
+    url: https://support.lanes-planes.com/hc/en-us
+  - type: Authentication
+    url: authentication/lanes-and-planes-authentication.yml
+common:
+- type: Website
+  url: https://www.lanes-planes.com/
+- type: Documentation
+  url: https://support.lanes-planes.com/hc/en-us
+- type: Support
+  url: https://support.lanes-planes.com/hc/en-us
+- type: HelpCenter
+  url: https://support.lanes-planes.com/hc/en-us
+- type: Blog
+  url: https://www.lanes-planes.com/blog/
+- type: Pricing
+  url: https://www.lanes-planes.com/en/packages/
+- type: SignUp
+  url: https://www.lanes-planes.com/en/demo/
+- type: Login
+  url: https://app.lanes-planes.com/
+- type: TermsOfService
+  url: https://www.lanes-planes.com/en/agb/
+- type: PrivacyPolicy
+  url: https://www.lanes-planes.com/en/data-protection/
+- type: Imprint
+  url: https://www.lanes-planes.com/en/imprint/
+- type: Careers
+  url: https://www.lanes-planes.com/en/career/
+- type: Press
+  url: https://www.lanes-planes.com/en/press/
+- type: Partners
+  url: https://www.lanes-planes.com/en/partner/
+- type: CustomerStories
+  url: https://www.lanes-planes.com/en/customer-stories/
+- type: LinkedIn
+  url: https://de.linkedin.com/company/lanes-planes-gmbh
+- type: TrustCenter
+  url: https://trust.lanes-planes.com/
+- type: Compliance
+  url: https://trust.lanes-planes.com/
+- type: LLMsTxt
+  url: llms/lanes-and-planes-llms.txt
+- type: Authentication
+  url: authentication/lanes-and-planes-authentication.yml
+- type: Conformance
+  url: conformance/lanes-and-planes-conformance.yml
+- type: DomainSecurity
+  url: security/lanes-and-planes-domain-security.yml
+- type: TrustCenter
+  name: Trust center artifact
+  url: security/lanes-and-planes-trust-center.yml
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
