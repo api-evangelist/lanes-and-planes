@@ -15,6 +15,17 @@ description: 'Lanes & Planes is a Munich-based travel and expense (T&E) manageme
   systems such as Workday, BambooHR and HiBob. Enterprise authentication is via SAML 2.0
   single sign-on. The company is certified to ISO 27001 and ISO 9001, is GDPR compliant, and
   hosts on European servers. Lanes & Planes is backed by Battery Ventures.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
