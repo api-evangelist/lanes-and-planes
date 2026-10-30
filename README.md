@@ -64,25 +64,94 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Lanes & Planes is a Munich-based travel and expense (T&E) management platform that positions itself as the financial infrastructure for European corporate travel. It covers the full T&E lifecycle in one system — travel request, digital approval flows, booking, and final accounting — across European rail (Deutsche Bahn, ÖBB, SBB, SNCF), flights including NDC content, 7M+ hotels, Airbnb for Work, rental cars, and ground mobility including the Deutschland-Ticket.
+Lanes & Planes is a Munich-based travel and expense (T&E) management platform that positions itself as the financial infrastructure for European corporate travel. The platform covers the full T&E lifecycle in one system: travel request, digital approval flows, booking, and final accounting. Its inventory spans European rail (Deutsche Bahn, ÖBB, SBB, SNCF), flights from the major global carriers and alliances including NDC content, over seven million hotels via direct interfaces plus HRS, Expedia and Booking.com, Airbnb for Work, global rental cars, and ground mobility including the Deutschland-Ticket and Flixbus. The product is built for finance departments, emphasizing VAT-compliant automated invoicing, German per-diem (VMA) tax logic, centralized billing on a single creditor, real-time budget tracking, and automated travel-policy enforcement. It integrates with ERP and accounting systems (DATEV, SAP, Microsoft Dynamics, Sage, Addison) and with HRIS platforms, offering native Personio synchronization and an External API (ExtAPI) for other HRIS and identity systems such as Workday, BambooHR and HiBob. Enterprise authentication is via SAML 2.0 single sign-on. The company is certified to ISO 27001 and ISO 9001, is GDPR compliant, and hosts on European servers. Lanes & Planes is backed by Battery Ventures.
 
-The product is built for finance departments: VAT-compliant automated invoicing, German per-diem (VMA) tax logic, centralized billing on a single creditor, real-time budget tracking, and automated travel-policy enforcement. It integrates with DATEV, SAP, Microsoft Dynamics, Sage and Addison on the ERP side, and with HRIS platforms via a native Personio connector plus an External API (ExtAPI) for Workday, BambooHR and HiBob.
+**Areas:** Company · Travel · Business Travel · Travel Management · Expense Management · Spend Management · Finance · Accounting · ERP Integration · HRIS · Software-as-a-Service · Germany
 
-Backed by: battery-ventures
+## Lanes & Planes on APIs.io
 
-## API posture
+Everything profiled for Lanes & Planes is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/lanes-and-planes/](https://apis.io/providers/lanes-and-planes/)** — or go straight to one of the APIs or properties below.
 
-Lanes & Planes has **no public API program**. There is no developer portal, API reference, OpenAPI definition, SDK, CLI, sandbox, changelog, or self-service credential flow. The External API (ExtAPI) is real — the company names it in its own `llms.txt` — but it is partner- and customer-gated, arranged through the implementation manager assigned at onboarding. `api.lanes-planes.com` is a live host but serves no documentation or discovery document.
+### APIs (1)
 
-This repo therefore captures identity, security posture, and compliance rather than API artifacts. Nothing about the API surface has been inferred or invented.
+- [Lanes & Planes External API (ExtAPI)](https://apis.io/apis/lanes-and-planes/ext-api/) — The External API (ExtAPI) is named in the company's own llms.txt as the integration surface used to synchronize employee and organizational data from HRIS…
 
-## Artifacts
+### Published properties
 
-| Artifact | Method | Notes |
-|---|---|---|
-| `llms/lanes-and-planes-llms.txt` | searched | First-party `/llms.txt`, saved verbatim — an unusually rich one, authored explicitly for AI models |
-| `well-known/lanes-and-planes-well-known.yml` | probed | Negative result: no `/.well-known/` documents on any host |
-| `security/lanes-and-planes-domain-security.yml` | probed | TLS 1.3, HSTS on www, CAA present, SPF + DMARC (`p=none`), no DNSSEC |
-| `security/lanes-and-planes-trust-center.yml` | searched | Vanta-hosted trust center; ISO 27001 + ISO 9001 |
-| `authentication/lanes-and-planes-authentication.yml` | searched | SAML 2.0 SSO; ExtAPI auth model undisclosed |
-| `conformance/lanes-and-planes-conformance.yml` | searched | SAML 2.0, ISO 27001/9001, GDPR, IATA NDC, EU VAT invoicing |
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (3)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Lanes And Planes Authentication](https://apis.io/security/lanes-and-planes/lanes-and-planes-authentication/)
+- [Lanes And Planes Domain Security](https://apis.io/security/lanes-and-planes/lanes-and-planes-domain-security/)
+- [Lanes And Planes Trust Center](https://apis.io/security/lanes-and-planes/lanes-and-planes-trust-center/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.lanes-planes.com/)
+- [Documentation](https://support.lanes-planes.com/hc/en-us)
+- [Pricing](https://www.lanes-planes.com/en/packages/)
+- [Sign up](https://www.lanes-planes.com/en/demo/)
+- [Support](https://support.lanes-planes.com/hc/en-us)
+- [Blog](https://www.lanes-planes.com/blog/)
+- [Compliance](https://trust.lanes-planes.com/)
+- [Trust centre](https://trust.lanes-planes.com/)
+- [Terms of service](https://www.lanes-planes.com/en/agb/)
+- [Privacy policy](https://www.lanes-planes.com/en/data-protection/)
+
+## API Evangelist rating
+
+**Kin Score 29.0** — thin · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 74.1 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 0.0 |
+| Developer ergonomics | 28.6 |
+| Access clarity | 60.5 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 29.4** — Employment & Payroll
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/lanes-and-planes/](https://apis.io/providers/lanes-and-planes/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Lanes & Planes: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/lanes-and-planes/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
